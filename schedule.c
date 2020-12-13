@@ -84,11 +84,15 @@ void sched_print(void* obj)
 void* sched_genSchedInfo(char* name, char* place, int type, int month, int day)
 {
 	schedInfo_t* schedPtr;
-	int i;
 	//error handler
 
-	struct schedInfo_t *schedPtr = malloc(sizeof(struct schedInfo))//allocate memory and set the member variables
-
+	struct schedInfo s1 = malloc(sizeof(struct schedInfo));//allocate memory and set the member variables
+    
+    printf("name : %c\n", s1.name);
+    printf("place : %c\n", s1.place);
+    printf("type : %d\n", s1. type);
+    printf("month : %d\n", s1.month);
+    printf("day : %d\n", s1.day)
 	return (void*)schedPtr;
 }
 
@@ -112,7 +116,7 @@ int sched_getType(void* obj)
 	struct schedInfo s1;
 	
     printf("유형을 선택하세요\n");
-	scanf("%d", &s1.month);
+	scanf("%d", &s1.type);
 	
 }
 
@@ -124,7 +128,7 @@ char* sched_getPlace(void* obj)
 	struct schedInfo s1;
 	
 	printf("장소를 선택하세요\n");
-	scanf("%d", &s1.month);
+	scanf("%d", &s1.place);
 
 }
 
