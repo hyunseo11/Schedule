@@ -5,11 +5,7 @@
 #include "linkedList.h"
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-struct movie information{
-	int schedule name;  //스케줄 내용  
-    int month, day;  //스케줄 월/일  
-    int place;  //스캐줄 장소  
-};
+
 int main(int argc, char *argv[]) {
 	
 	int exit_flag = 0;
@@ -29,8 +25,7 @@ int main(int argc, char *argv[]) {
 	int cnt;
 	
 	//1. FILE pointer open & error handling
-	
-	fp = fopen("schedule.dat", "r");
+	fp = fopen("schedule.txt", "r");
 	if (fp == NULL)
 	{
 		return -1;
@@ -49,7 +44,7 @@ int main(int argc, char *argv[]) {
 	
 	
 	//2. read from the file
-	while ( fgets(str, 100, fp) != NULL/* fill code here -- read from the file*/ )
+	while (/* fill code here -- read from the file*/ )
 	{	
 		//fill code here -- generate genSchedInfo structure by genSchedInfo function
 		
