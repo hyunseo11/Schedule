@@ -84,15 +84,13 @@ void sched_print(void* obj)
 void* sched_genSchedInfo(char* name, char* place, int type, int month, int day)
 {
 	schedInfo_t* schedPtr;
-	//error handler
+	if (schedPtr == NULL)//error handler
+	{
+		return -1;
+	}
 
-	struct schedInfo s1 = malloc(sizeof(struct schedInfo));//allocate memory and set the member variables
+	schedPtr = (schedInfo_t*)malloc(sizeof(int));//allocate memory and set the member variables
     
-    printf("name : %c\n", s1.name);
-    printf("place : %c\n", s1.place);
-    printf("type : %d\n", s1. type);
-    printf("month : %d\n", s1.month);
-    printf("day : %d\n", s1.day)
 	return (void*)schedPtr;
 }
 
@@ -106,7 +104,6 @@ float sched_getMonth(void* obj)
 	printf("월을 선택하세요\n");
 	scanf("%d", &s1.month);
 	
-	return s1;
 }
 
 
@@ -135,8 +132,7 @@ char* sched_getPlace(void* obj)
 //convert the name of the type into the enum(integer) value
 int sched_convertType(char* typeName)
 {
-	enum shcduleType type;
+	scheduleType_e;
 	
-	printf("%d\n", type);
 }
 

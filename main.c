@@ -25,14 +25,13 @@ int main(int argc, char *argv[]) {
 	int cnt;
 	
 	//1. FILE pointer open & error handling
-	fp = fopen("schedule.txt", "r");
+	fp = fopen("schedule.dat", "r");
 	if (fp == NULL)
 	{
 		return -1;
 	}
 	
 	
-	//fill code here ----
 	while ((c = fgetc(fp)) != EOF) {{
 			fprintf("%s %s %d %d %d\n", name, place, type, month, day);
 	}
@@ -44,7 +43,7 @@ int main(int argc, char *argv[]) {
 	
 	
 	//2. read from the file
-	while (/* fill code here -- read from the file*/ )
+	while (fp = fopen("sample.exe", "r")//* fill code here -- read from the file*/ 
 	{	
 		//fill code here -- generate genSchedInfo structure by genSchedInfo function
 		
