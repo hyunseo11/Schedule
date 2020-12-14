@@ -102,7 +102,7 @@ float sched_getMonth(void* obj)
 	struct schedInfo s1;
 	
 	printf("월을 선택하세요\n");
-	scanf("%d", &s1.month);
+	scanf("%d\n", &s1.month);
 	
 }
 
@@ -113,7 +113,7 @@ int sched_getType(void* obj)
 	struct schedInfo s1;
 	
     printf("유형을 선택하세요\n");
-	scanf("%d", &s1.type);
+	scanf("%d\n", &s1.type);
 	
 }
 
@@ -125,14 +125,17 @@ char* sched_getPlace(void* obj)
 	struct schedInfo s1;
 	
 	printf("장소를 선택하세요\n");
-	scanf("%d", &s1.place);
+	scanf("%d\n", &s1.place);
 
 }
 
 //convert the name of the type into the enum(integer) value
 int sched_convertType(char* typeName)
 {
-	scheduleType_e;
+	scheduleType_e type;
+	
+	scanf("%d\n", &type);
+	printf("type : %d\n", type);
 	
 }
 

@@ -25,8 +25,7 @@ int main(int argc, char *argv[]) {
 	int cnt;
 	
 	//1. FILE pointer open & error handling
-	fp = fopen("schedule.dat", "r");
-	if (fp == NULL)
+	if ((fp = fopen("schedule.dat", "r")) == NULL)
 	{
 		return -1;
 	}
@@ -43,7 +42,7 @@ int main(int argc, char *argv[]) {
 	
 	
 	//2. read from the file
-	while (fp = fopen("sample.exe", "r")//* fill code here -- read from the file*/ 
+	while ((fp = fopen("sample.exe", "r")) == NULL)//* fill code here -- read from the file*/ 
 	{	
 		//fill code here -- generate genSchedInfo structure by genSchedInfo function
 		
@@ -52,7 +51,7 @@ int main(int argc, char *argv[]) {
 	}
 	
 	
-	//fill code here ---- close the file pointer
+	fclose(fp);//fill code here ---- close the file pointer
 	
 	printf("Read done! %i schedules are read\n", list_len(list));
 	
